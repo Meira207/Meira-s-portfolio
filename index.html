@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171713">
+<meta name="description" content="A cinematic, personal creative portfolio exploring style, everyday life, and visual storytelling.">
+<title>Meira — A Visual Diary</title>
+<style>
+:root{--ink:#191916;--paper:#f2efe8;--muted:#77756d;--line:rgba(25,25,22,.18);--accent:#b95f45;--serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}.topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;border-bottom:1px solid var(--line);font-size:11px;letter-spacing:.13em;text-transform:uppercase}.brand{font-family:var(--serif);font-size:20px;letter-spacing:-.04em;text-transform:none}.nav{display:flex;gap:25px}.nav a{opacity:.72}.nav a:hover{opacity:1}.hero{padding:6vw 5vw 4vw;display:grid;grid-template-columns:1fr .82fr;gap:5vw;align-items:end;min-height:590px}.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 24px}.hero h1{font:clamp(58px,10.6vw,150px)/.83 var(--serif);letter-spacing:-.075em;font-weight:400;margin:0;max-width:780px}.hero h1 em{font-weight:400;color:var(--accent)}.hero-copy{max-width:350px;justify-self:end;margin-bottom:10px}.hero-copy p{font:19px/1.55 var(--serif);margin:0 0 26px}.text-link{display:inline-flex;gap:15px;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:8px;font-size:10px;letter-spacing:.15em;text-transform:uppercase}.hero-image{position:relative;margin:0 5vw 8vw;max-height:680px;overflow:hidden;background:#d3c9b5}.hero-image img{display:block;width:100%;height:min(72vw,680px);object-fit:cover;object-position:center 48%;filter:saturate(.78)}.image-note{position:absolute;bottom:18px;left:20px;color:#fff;font-size:10px;letter-spacing:.15em;text-transform:uppercase;text-shadow:0 1px 8px #000}.section{padding:5vw 5vw}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}.section-head h2{font:clamp(38px,6vw,76px)/.95 var(--serif);font-weight:400;letter-spacing:-.055em;margin:0}.section-head p{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 30px}.filter{border:1px solid var(--line);background:transparent;border-radius:99px;padding:10px 15px;font-size:10px;text-transform:uppercase;letter-spacing:.12em;cursor:pointer}.filter.active,.filter:hover{background:var(--ink);color:var(--paper)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:26px 18px}.project{cursor:pointer;min-width:0}.project[hidden]{display:none}.project:nth-child(1){grid-column:span 7}.project:nth-child(2){grid-column:span 5;margin-top:90px}.project:nth-child(3){grid-column:span 5}.project:nth-child(4){grid-column:span 7;margin-top:70px}.project:nth-child(5){grid-column:span 6}.project:nth-child(6){grid-column:span 6;margin-top:80px}.project:nth-child(n+7){grid-column:span 4}.project-media{overflow:hidden;background:#d9d4c9;position:relative}.project-media img{display:block;width:100%;height:clamp(260px,48vw,610px);object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);filter:saturate(.83)}.project:nth-child(2) .project-media img,.project:nth-child(5) .project-media img{height:clamp(260px,38vw,470px)}.project:hover .project-media img{transform:scale(1.035)}.project-number{position:absolute;right:14px;top:14px;background:var(--paper);border-radius:50%;width:35px;height:35px;display:grid;place-items:center;font:13px var(--serif)}.project-meta{display:flex;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid var(--line);margin-top:10px}.project-meta h3{font:25px/1.05 var(--serif);font-weight:400;letter-spacing:-.035em;margin:0}.project-meta span{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:5px;white-space:nowrap}.statement{background:#24241f;color:var(--paper);padding:9vw 8vw;display:grid;grid-template-columns:.6fr 1.4fr;gap:8vw;align-items:start}.statement .eyebrow{color:#d98b6e}.statement h2{font:clamp(36px,5.4vw,72px)/1.02 var(--serif);font-weight:400;letter-spacing:-.05em;margin:0;max-width:800px}.statement h2 em{color:#d98b6e}.statement p{color:#c4c0b6;font:17px/1.7 var(--serif);max-width:480px;margin:28px 0 0}.video-section{padding:7vw 5vw}.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.video-card{cursor:pointer}.video-thumb{position:relative;overflow:hidden;background:#d3c9b5;aspect-ratio:9/14}.video-thumb video{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.8);transition:transform .6s}.video-card:hover video{transform:scale(1.025)}.play{position:absolute;left:16px;bottom:16px;background:var(--paper);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:14px}.video-card h3{font:25px var(--serif);font-weight:400;margin:13px 0 5px}.video-card p{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0}.about{padding:7vw 5vw;display:grid;grid-template-columns:.9fr 1.1fr;gap:8vw;align-items:center;border-top:1px solid var(--line)}.about-image{height:540px;overflow:hidden}.about-image img{width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:saturate(.78)}.about h2{font:clamp(48px,7vw,92px)/.9 var(--serif);font-weight:400;letter-spacing:-.06em;margin:0 0 28px}.about-copy{max-width:510px}.about-copy p{font:18px/1.7 var(--serif);color:#4d4b44}.skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.skills span{border:1px solid var(--line);border-radius:99px;padding:9px 12px;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.contact{background:#ded8cc;padding:8vw 5vw;display:flex;justify-content:space-between;align-items:end;gap:30px}.contact h2{font:clamp(52px,9vw,120px)/.85 var(--serif);font-weight:400;letter-spacing:-.07em;margin:0}.contact .right{max-width:290px}.contact .right p{font:17px/1.55 var(--serif)}.footer{display:flex;justify-content:space-between;padding:22px 5vw;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.modal{position:fixed;inset:0;background:rgba(16,16,14,.94);z-index:10;display:none;align-items:center;justify-content:center;padding:24px}.modal.open{display:flex}.modal-inner{max-width:1100px;width:100%;max-height:90vh;display:grid;grid-template-columns:1.2fr .8fr;background:var(--paper);position:relative;overflow:auto}.modal-visual{background:#d8d2c6;min-height:300px}.modal-visual img,.modal-visual video{width:100%;height:100%;max-height:80vh;object-fit:contain;display:block;background:#191916}.modal-copy{padding:50px 34px;align-self:center}.modal-copy .eyebrow{margin-bottom:18px}.modal-copy h2{font:clamp(35px,5vw,60px)/.95 var(--serif);font-weight:400;letter-spacing:-.05em;margin:0 0 20px}.modal-copy p{font:17px/1.6 var(--serif);color:#55534b}.close{position:absolute;right:12px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:var(--paper);font-size:23px;cursor:pointer;z-index:2}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:700px){.topbar{padding:17px 5vw}.nav{gap:12px}.nav a{font-size:9px}.hero{grid-template-columns:1fr;min-height:0;padding-top:16vw;gap:35px}.hero h1{font-size:clamp(62px,17vw,110px)}.hero-copy{justify-self:start;margin:0;max-width:310px}.hero-image{margin:0 5vw 12vw}.hero-image img{height:115vw;max-height:620px}.section{padding:12vw 5vw}.section-head{align-items:start;flex-direction:column}.grid{gap:28px 12px}.project:nth-child(n){grid-column:span 6;margin-top:0}.project:nth-child(1),.project:nth-child(4){grid-column:span 12}.project-media img{height:65vw}.project:nth-child(1) .project-media img,.project:nth-child(4) .project-media img{height:100vw}.project-meta{display:block}.project-meta h3{font-size:22px}.project-meta span{display:block;margin-top:7px}.statement{grid-template-columns:1fr;gap:28px;padding:14vw 7vw}.video-section{padding:12vw 5vw}.video-grid{grid-template-columns:repeat(2,1fr);gap:20px 12px}.video-card:last-child{grid-column:span 2;width:65%}.video-card h3{font-size:21px}.about{grid-template-columns:1fr;gap:35px;padding:12vw 5vw}.about-image{height:105vw;max-height:600px}.contact{display:block;padding:14vw 5vw}.contact .right{margin-top:35px}.footer{gap:18px;flex-wrap:wrap}.modal{padding:12px}.modal-inner{grid-template-columns:1fr;max-height:94vh}.modal-visual{max-height:52vh}.modal-visual img,.modal-visual video{max-height:52vh}.modal-copy{padding:28px 24px}.modal-copy h2{font-size:42px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home">Meira<span style="color:var(--accent)">.</span></a>
+  <nav class="nav"><a href="#work">Selected work</a><a href="#motion">Motion</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+<main id="home">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">A personal visual diary · 2026</p>
+      <h1>Life, in<br><em>frames.</em></h1>
+    </div>
+    <div class="hero-copy">
+      <p>A collection of places, people, personal style, and the little details that make a moment stay.</p>
+      <a class="text-link" href="#work">Explore selected work <span>↘</span></a>
+    </div>
+  </section>
+  <figure class="hero-image">
+    <img src="assets/back.jpeg" alt="A back shot of a girl dressed in black">
+    <figcaption class="image-note">01 / Somewhere between stillness and movement</figcaption>
+  </figure>
+
+  <section class="section" id="work">
+    <div class="section-head reveal"><div><p class="eyebrow">The visual archive</p><h2>Selected moments</h2></div><p>Personal work / ongoing</p></div>
+    <div class="filters" aria-label="Filter projects">
+      <button class="filter active" data-filter="all">All work</button><button class="filter" data-filter="style">Style & self</button><button class="filter" data-filter="places">Places & atmosphere</button><button class="filter" data-filter="art">Visual experiments</button>
+    </div>
+    <div class="grid">
+      <article class="project reveal" data-category="places" data-title="The quiet in between" data-kicker="Places & atmosphere · Photograph" data-image="assets/beach-silhouette.jpeg" data-description="A sunlit shoreline, a long reflection, and a silhouette held between land and water. This image sets the tone for the portfolio: attentive to atmosphere, contrast, and the emotion of a place.">
+        <div class="project-media"><img loading="lazy" src="assets/back.jpeg" alt="Dim light as the day comes to an end"><span class="project-number">01</span></div><div class="project-meta"><h3>The quiet in between</h3><span>Atmosphere / Photo</span></div>
+      </article>
+      <article class="project reveal" data-category="style" data-title="A little dressed up" data-kicker="Style & self · Portrait" data-image="assets/portrait.jpeg" data-description="An unguarded portrait with warmth, confidence, and a little playfulness. The strongest personal images don't need to feel overly staged; they need to feel like the person in them.">
+        <div class="project-media"><img loading="lazy" src="assets/portrait.jpeg" alt="Smiling portrait in a black outfit"><span class="project-number">02</span></div><div class="project-meta"><h3>A shot from a little dressed up friend</h3><span>Portrait / Personal</span></div>
+      </article>
+      <article class="project reveal" data-category="style" data-title="Black, after dark" data-kicker="Style & self · Editorial" data-image="assets/city-night.jpeg" data-description="A personal style moment framed by a city after dark. The architecture and illuminated windows create a graphic backdrop, while the gold details add a warmer note.">
+        <div class="project-media"><img loading="lazy" src="assets/city-night.jpeg" alt="Nighttime city lights behind a personal style portrait"><span class="project-number">03</span></div><div class="project-meta"><h3>Black, after dark</h3><span>Style / Nightlife</span></div>
+      </article>
+      <article class="project reveal" data-category="art" data-title="One image, many selves" data-kicker="Visual experiments · Photo collage" data-image="assets/pink-collage.jpeg" data-description="A playful layered portrait that turns one image into a small visual world. Repetition, scale, and the pink palette make this a natural starting point for a section on collage and digital experimentation.">
+        <div class="project-media"><img loading="lazy" src="assets/pink-collage.jpeg" alt="A layered pink-dress portrait collage"><span class="project-number">04</span></div><div class="project-meta"><h3>One image, many selves</h3><span>Collage / Experiment</span></div>
+      </article>
+      <article class="project reveal" data-category="style" data-title="The other angle" data-kicker="Style & self · Portrait" data-image="assets/backstage-look.jpeg" data-description="A look from another angle: shape, movement, and the silhouette of an outfit against a simple corridor. A reminder that a strong fashion image can come from an ordinary setting.">
+        <div class="project-media"><img loading="lazy" src="assets/backstage-look.jpeg" alt="Back view of a black outfit in a corridor"><span class="project-number">05</span></div><div class="project-meta"><h3>Back motion image captured from an outing. </h3><span>Style / Portrait</span></div>
+      </article>
+      <article class="project reveal" data-category="places" data-title="Behind the lens" data-kicker="Creative practice · Self-portrait" data-image="assets/curious-by-nature.jpeg" data-description="A black-and-white portrait with the camera at the center. It brings the portfolio back to the person behind the images, and to the curiosity that makes visual storytelling personal.">
+        <div class="project-media"><img loading="lazy" src="assets/curious-by-nature.jpeg" alt="Black-and-white photograph of Meira holding a camera"><span class="project-number">06</span></div><div class="project-meta"><h3>Behind the lens</h3><span>Creative practice / Portrait</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="statement reveal">
+    <p class="eyebrow">A point of view</p>
+    <div><h2>Not everything needs to be perfect. It needs to <em>feel something.</em></h2><p>I’m drawn to the moments in between the big ones: the dim light at the edge of the day, the outfit before going out, the city after sunset, the everyday scenes that become memories. This portfolio is a record of looking closely.</p></div>
+  </section>
+
+  <section class="video-section" id="motion">
+    <div class="section-head reveal"><div><p class="eyebrow">Moving pictures</p><h2>Life in motion</h2></div><p>Short-form video / visual diary</p></div>
+    <div class="video-grid">
+      <article class="video-card reveal" data-video="assets/city-diary.mp4" data-title="A day, cut into moments" data-description="A short-form city diary built from transitions between getting ready, travel, architecture, and street-level details.">
+        <div class="video-thumb"><video muted playsinline preload="metadata" src="assets/city-diary.mp4"></video><span class="play">▶</span></div><h3>A day, cut into moments</h3><p>City diary · Vertical video</p>
+      </article>
+      <article class="video-card reveal" data-video="assets/little-moments.mp4" data-title="The everyday edit" data-description="Small everyday scenes — movement through a space, food, screens, and passing details — assembled as a personal visual log."><div class="video-thumb"><video muted playsinline preload="metadata" src="assets/little-moments.mp4"></video><span class="play">▶</span></div><h3>The everyday edit</h3><p>Daily life · Vertical video</p></article>
+      <article class="video-card reveal" data-video="assets/everyday-motion.mp4" data-title="People, energy, memory" data-description="A more social, candid edit built around people and movement. It brings a different rhythm to the quieter, more composed photographs."><div class="video-thumb"><video muted playsinline preload="metadata" src="assets/everyday-motion.mp4"></video><span class="play">▶</span></div><h3>People, energy, memory</h3><p>People & movement · Vertical video</p></article>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-image reveal"><img src="assets/curious-by-nature.jpeg" loading="lazy" alt="Black-and-white photograph of Meira holding a camera"></div>
+    <div class="about-copy reveal"><p class="eyebrow">A little about me</p><h2>Curious by<br>nature.</h2><p>I’m Meira — a creative observer with an interest in visual storytelling, personal style, digital culture, and the way images can bring people into a moment.</p><p>This is an evolving collection of things I make, notice, and want to remember. Some pieces are polished; others are deliberately personal. Together, they reflect how I see the world.</p><div class="skills"><span>Visual storytelling</span><span>Short-form video</span><span>Photography</span><span>Creative editing</span><span>Digital culture</span></div></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div><p class="eyebrow">Have something in mind?</p><h2>Let’s make<br><em style="font-family:var(--serif);font-weight:400;color:var(--accent)">a moment.</em></h2></div>
+    <div class="right"><p>Open to creative projects, collaborations, and new ideas. I’d love to hear what you’re working on.</p><a class="text-link" href="mailto:di2239@nyu.edu?subject=Creative%20collaboration">Start a conversation ↗</a><p style="font:11px/1.5 var(--sans);color:var(--muted)"></p></div>
+  </section>
+</main>
+<footer class="footer"><span>© 2026 Meira · A visual diary</span><span>Made with curiosity and intention</span><a href="#home">Back to top ↑</a></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Project detail">
+  <div class="modal-inner"><button class="close" aria-label="Close project">×</button><div class="modal-visual" id="modalVisual"></div><div class="modal-copy"><p class="eyebrow" id="modalKicker"></p><h2 id="modalTitle"></h2><p id="modalDescription"></p></div></div>
+</div>
+<script>
+const filters=document.querySelectorAll('.filter');
+const projects=document.querySelectorAll('.project');
+filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');projects.forEach(p=>p.hidden=btn.dataset.filter!=='all'&&p.dataset.category!==btn.dataset.filter)}));
+const modal=document.getElementById('modal'), visual=document.getElementById('modalVisual');
+function openModal({title,kicker,description,image,video}){visual.innerHTML='';if(image){const el=document.createElement('img');el.src=image;el.alt=title;visual.appendChild(el)}if(video){const el=document.createElement('video');el.src=video;el.controls=true;el.autoplay=true;el.playsInline=true;visual.appendChild(el)}document.getElementById('modalTitle').textContent=title;document.getElementById('modalKicker').textContent=kicker||'Moving pictures';document.getElementById('modalDescription').textContent=description||'';modal.classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(){modal.classList.remove('open');document.body.style.overflow='';visual.innerHTML=''}
+projects.forEach(p=>p.addEventListener('click',()=>openModal({title:p.dataset.title,kicker:p.dataset.kicker,description:p.dataset.description,image:p.dataset.image})));
+document.querySelectorAll('.video-card').forEach(card=>{const vid=card.querySelector('video');card.addEventListener('mouseenter',()=>vid.play().catch(()=>{}));card.addEventListener('mouseleave',()=>{vid.pause();try{vid.currentTime=0}catch(e){}});card.addEventListener('click',()=>openModal({title:card.dataset.title,description:card.dataset.description,video:card.dataset.video}))});
+document.querySelector('.close').addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
